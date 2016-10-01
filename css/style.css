@@ -1,0 +1,188 @@
+@import '//fonts.googleapis.com/css?family=Lato:400,400italic|Arvo:700,400,400italic';
+body {
+    margin: 0;
+    padding: 0;
+    color: #4e443c;
+    background: #f0efe7;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .75);
+    font: 15px/1.5 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Arvo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-rendering: optimizelegibility;
+}
+
+h1 {
+    color: #4e443c;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.item {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    background: url('../img/checkbox-sprite.png') no-repeat;
+}
+
+.niceCheck input {
+    display: none;
+}
+
+.niceCheck label {
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+label + p,
+input + p {
+    margin-top: 20px;
+}
+
+p > input {
+    position: absolute;
+    left: 0;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+p > label {
+    padding: 0 0 0 18px;
+    line-height: 16px;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+}
+
+    p:not(#foo) > input + label {
+    height: 16px;
+    background: url('../img/gr_custom-inputs.png') 0 -1px no-repeat;
+}
+
+/* Checked styles */
+
+    p:not(#foo) > input[type=checkbox]:checked + label {
+    background-position: 0 -81px;
+}
+
+    p:not(#foo) > input[type=checkbox]:hover:checked + label,
+    p:not(#foo) > input[type=checkbox]:focus:checked + label,
+    p:not(#foo) > input[type=checkbox]:checked + label:hover,
+    p:not(#foo) > input[type=checkbox]:focus:checked + label {
+    background-position: 0 -101px;
+}
+
+/* Hover & Focus styles */
+
+    p:not(#foo) > input[type=checkbox]:hover + label,
+    p:not(#foo) > input[type=checkbox]:focus + label,
+    p:not(#foo) > input[type=checkbox] + label:hover {
+    background-position: 0 -21px;
+}
+
+/* Active styles */
+
+    p:not(#foo) > input[type=checkbox]:active + label,
+    p:not(#foo) > input[type=checkbox] + label:hover:active {
+    background-position: 0 -41px;
+}
+
+    p:not(#foo) > input[type=checkbox]:active:checked + label,
+    p:not(#foo) > input[type=checkbox]:checked + label:hover:active {
+    background-position: 0 -121px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav {
+    background-color: rgb(47, 107, 219);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu {
+    margin: 0 0 0 160px;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__item {
+    position: relative;
+    display: inline-block;
+}
+
+.menu__link {
+    line-height: 50px;
+    display: block;
+    padding: 0 10px;
+}
+
+.sub-menu {
+    font-size: 12px;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 150px;
+    padding-bottom: 10px;
+    opacity: .85;
+    background-color: #252599;
+}
+
+.sub-menu__item {
+    line-height: 30px;
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    border-bottom: 1px dotted white;
+}
+
+.sub-menu__item:last-child {
+    border-bottom: none;
+}
+
+.sub-menu__item > .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '';
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jcarousel.basic.css">
+    <link rel="stylesheet" href="css/selectric.css">
+    <link rel="stylesheet" href="css/line.css">
+    <link rel="stylesheet" href="css/grey.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/9f3fe5293f.js"></script>
+    <script type="text/javascript" src="js/jquery.color.js"></script>
+    <script type="text/javascript" src="js/menu.color.js"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.basic.js"></script>
+    <script src="js/jquery.selectric.js"></script>
+    <script type="text/javascript" src="js/jquery.checkbox.js"></script>
+    <script src="js/icheck.js"></script>
+    <title>JS_09-10</title>
+</head>
+
+<body>
+    <h1>Animated Dropdown Menu</h1>
+    <nav>
+        <ul class="menu clearfix">
+            <li class="menu__item"><a href="#" class="menu__link">Menu 1</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Menu 2</a></li>
+            <li class="dropdown menu__item"><a href="#" class="menu__link">Menu 3 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <ul class="sub-menu">
+                    <li class="sub-menu__item"><a href="#" class="sub-menu__link">Submenu 1</a></li>
+                    <li class="sub-menu__item"><a href="#" class="sub-menu__link">Submenu 2</a></li>
+                    <li class="sub-menu__item"><a href="#" class="sub-menu__link">Submenu 3</a></li>
+                    <li class="dropdown sub-menu__item"><a href="#" class="sub-menu__link">Submenu 4 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Submenu 4.1</a></li>
+                            <li class="dropdown sub-menu__item"><a href="#" class="sub-menu__link">Submenu 4.2</a>
+                            </li>
+                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Submenu 4.3</a></li>
+                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Submenu 4.4</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu__item"><a href="#" class="sub-menu__link">Submenu 5</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#" class="menu__link">Menu 4</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Menu 5</a></li>
+        </ul>
+    </nav>
+    <h1>Carousel</h1>
+    <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+            <ul>
+                <li><img src="img/img_01.jpg" width="600" height="400" alt=""></li>
+                <li><img src="img/img_02.jpg" width="600" height="400" alt=""></li>
+                <li><img src="img/img_03.jpg" width="600" height="400" alt=""></li>
+                <li><img src="img/img_04.jpg" width="600" height="400" alt=""></li>
+                <li><img src="img/img_05.jpg" width="600" height="400" alt=""></li>
+                <li><img src="img/img_06.jpg" width="600" height="400" alt=""></li>
+            </ul>
+        </div>
+        <p class="photo-credits">
+            Photos by <a href="http://lorempixel.com/">Lorempixel</a>
+        </p>
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+        <p class="jcarousel-pagination">
+        </p>
+    </div>
+    <div class="custom-select">
+        <h1>Custom select JQuery Plugin</h1>
+        <div class="item">
+            <select>
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="orange">Orange</option>
+                <option value="jackfruit">Jackfruit</option>
+                <option value="jambul">Jambul</option>
+                <option value="jujube">Jujube</option>
+                <option value="kiwifruit">Kiwifruit</option>
+                <option value="kumquat">Kumquat</option>
+                <option value="lemon">Lemon</option>
+            </select>
+        </div>
+    </div>
+    <div class="custom-checkbox-jq1">
+        <h1>Custom Checkbox JQuery</h1>
+        <div class="item">
+            <p class="niceCheck">
+                <label for="appl">Apple</label>
+                <input class="jq-check" type="checkbox" id="appl" name="ch1" />
+            </p>
+            <p class="niceCheck">
+                <label for="orang">Orange</label>
+                <input class="jq-check" type="checkbox" id="orang" name="ch1" checked/>
+            </p>
+            <p class="niceCheck">
+                <label for="jambu">Jambul</label>
+                <input class="jq-check" type="checkbox" id="jambu" name="ch1" />
+            </p>
+            <p class="niceCheck">
+                <label for="lemo">Lemon</label>
+                <input class="jq-check" type="checkbox" id="lemo" name="ch1" />
+            </p>
+        </div>
+    </div>
+    <div class="custom-checkbox-jq2">
+        <h1>Custom Checkbox JQuery Plugin</h1>
+        <div class="item">
+            <input class="custom-jq" type="checkbox">
+            <label>Apple</label>
+            <input class="custom-jq" type="checkbox" checked>
+            <label>Orange</label>
+            <input class="custom-jq" type="checkbox">
+            <label>Jambul</label>
+            <input class="custom-jq" type="checkbox">
+            <label>Lemon</label>
+        </div>
+        <div class="custom-checkbox-css">
+            <h1>Custom Checkbox CSS</h1>
+            <div class="item">
+                <p>
+                    <input id="apple" type="checkbox">
+                    <label for="apple">Apple</label>
+                </p>
+                <p>
+                    <input id="orange" type="checkbox" checked>
+                    <label for="orange">Orange</label>
+                </p>
+                <p>
+                    <input id="jambul" type="checkbox">
+                    <label for="jambul">Jambul</label>
+                </p>
+                <p>
+                    <input id="lemon" type="checkbox">
+                    <label for="lemon">Lemon</label>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
